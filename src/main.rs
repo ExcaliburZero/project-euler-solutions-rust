@@ -1,7 +1,7 @@
 use std::collections::BTreeMap;
 use std::env;
 
-use project_euler::prob_0001;
+use project_euler::*;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -15,6 +15,7 @@ fn get_solvers() -> BTreeMap<u64, Box<dyn Fn() -> String>> {
     let mut solvers: BTreeMap<u64, Box<dyn Fn() -> String>> = BTreeMap::new();
 
     solvers.insert(1, Box::new(prob_0001::solve));
+    solvers.insert(2, Box::new(prob_0002::solve));
 
     solvers
 }
