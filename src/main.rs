@@ -16,6 +16,7 @@ fn get_solvers() -> BTreeMap<u64, Box<dyn Fn() -> String>> {
 
     solvers.insert(1, Box::new(prob_0001::solve));
     solvers.insert(2, Box::new(prob_0002::solve));
+    solvers.insert(3, Box::new(prob_0003::solve));
 
     solvers
 }
